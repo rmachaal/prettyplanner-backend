@@ -1,0 +1,19 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "target": "ES6", 
+    "module": "CommonJS", 
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "strict": true, 
+    "esModuleInterop": true, 
+    "skipLibCheck": true, 
+    "forceConsistentCasingInFileNames": true, 
+    "resolveJsonModule": true,
+    "noImplicitAny": false, 
+    "allowSyntheticDefaultImports": true, 
+    "types": ["node"] 
+  },
+  "include": ["src/**/*.ts", "prisma/**/*.ts"], 
+  "exclude": ["node_modules", "dist", "tests/**/*.ts"] 
+}
