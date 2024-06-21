@@ -1,4 +1,5 @@
 import express, { Request, Response } from "express";
+import cors from "cors";
 import { getAllTodoLists } from "./controllers/getAllTodoLists";
 import { getTodoListById } from "./controllers/getTodoListById";
 import { createTodoList } from "./controllers/createTodoList";
@@ -9,6 +10,7 @@ import { removeItemFromList } from "./controllers/removeItemFromList";
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.use(cors());
 app.use(express.json());
 
 // test route to check if the server is running correctly
