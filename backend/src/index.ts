@@ -8,7 +8,7 @@ import { deleteTodoList } from "./controllers/deleteTodoList";
 import { removeItemFromList } from "./controllers/removeItemFromList";
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3300;
 
 app.use(cors());
 app.use(express.json());

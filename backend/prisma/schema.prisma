@@ -9,18 +9,18 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "cockroachdb"
   url      = env("DATABASE_URL")
 }
 
 model TodoList {
-  id        Int      @id @default(autoincrement())
+  id        Int      @id @default(sequence())
   title     String
   items     Item[]
 }
 
 model Item {
-  id        Int      @id @default(autoincrement())
+  id        Int      @id @default(sequence())
   content   String
   completed Boolean  @default(false)
   list      TodoList @relation(fields: [listId], references: [id])
