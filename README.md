@@ -1,6 +1,6 @@
 # PrettyPlanner (backend)
 
-This repository contains the backend for a To-Do List application, built with Express.js, TypeScript, Prisma ORM, and MySQL.
+This repository contains the backend for a To-Do List application, built with Express.js, TypeScript, Prisma ORM, and CockroachDB.
 
 ## Hosted API
 
@@ -21,13 +21,12 @@ The live version of this API is hosted [here](https://prettyplanner-api.onrender
 - Express.js
 - TypeScript
 - Prisma ORM
-- MySQL
+- CockroachDB
 - Zod (for data validation)
 
 ## Prerequisites
 
 - Node.js (v14 or later)
-- MySQL database
 
 ## Setup Instructions
 
@@ -44,9 +43,9 @@ The live version of this API is hosted [here](https://prettyplanner-api.onrender
 
 Create a `.env` file in the root directory with the following variable:
 
-`DATABASE_URL="mysql://username:password@mysql-hostname.cloud-provider.com:3306/todo_db"`
+`DATABASE_URL="postgresql://username:password@cockroach-hostname.cloud-provider.com:26257/todo_db?sslmode=verify-full"`
 
-Replace the `DATABASE_URL` with your MySQL connection string and `username`, `password`, and `todo_db` with your MySQL credentials and desired database name.
+Replace the `DATABASE_URL` with your CockroachDB connection string and `username`, `password`, and `todo_db` with your CockroachDB credentials and desired database name.
 
 4. Set up the database:
 
