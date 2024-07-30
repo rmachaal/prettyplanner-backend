@@ -13,6 +13,7 @@ The live version of this API is hosted [here](https://prettyplanner-api.onrender
 - `POST /todolists`: Create a new to-do list
 - `DELETE /todolists/:id`: Delete a to-do list
 - `POST /todolists/:id/items`: Add an item to a list
+- `PATCH /todolists/:id/items/:itemId` : Edits to-do list item
 - `DELETE /todolists/:id/items/:itemId`: Remove an item from a list
 
 ## Tech Stack

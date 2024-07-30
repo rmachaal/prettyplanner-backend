@@ -1,3 +1,4 @@
+import "dotenv/config"; 
 import express, { Request, Response } from "express";
 import cors from "cors";
 import { getAllTodoLists } from "./controllers/getAllTodoLists";
@@ -6,6 +7,7 @@ import { createTodoList } from "./controllers/createTodoList";
 import { addItemToList } from "./controllers/addItemToList";
 import { deleteTodoList } from "./controllers/deleteTodoList";
 import { removeItemFromList } from "./controllers/removeItemFromList";
+import { editTodoListItem } from "./controllers/editTodoListItem";
 
 const app = express();
 const port = process.env.PORT || 3300;
@@ -23,6 +25,7 @@ app.get("/todolists", getAllTodoLists);
 app.get("/todolists/:id", getTodoListById);
 app.post("/todolists", createTodoList);
 app.post("/todolists/:id/items", addItemToList);
+app.patch("/todolists/:id/items/:itemId", editTodoListItem);
 app.delete("/todolists/:id", deleteTodoList);
 app.delete("/todolists/:id/items/:itemId", removeItemFromList);
 
